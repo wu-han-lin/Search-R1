@@ -4,6 +4,7 @@ import random
 from datasets import load_dataset
 import requests
 
+
 question = "Mike Barnett negotiated many contracts including which player that went on to become general manager of CSKA Moscow of the Kontinental Hockey League?"
 
 # Model ID and device setup

@@ -1,0 +1,1 @@
+mlx worker launch --cluster=cloudnative-lq --type=A100-SXM-80GB --resourcetype=arnold --queuename=compute-191-lq-cloudnative-ai-seed.research-guarantee --usergroup=seed-research --gpu=8 --node=2 -- bash 2>&1

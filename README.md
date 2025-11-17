@@ -77,7 +77,8 @@ pip3 install vllm==0.6.3 # or you can install 0.5.4, 0.4.2 and 0.3.1
 pip install -e .
 
 # flash attention 2
-pip3 install flash-attn --no-build-isolation
+export MAX_JOBS=16
+pip install flash-attn==2.7.4.post1 --no-build-isolation --no-cache-dir -vvv
 pip install wandb
 ```
 
@@ -105,7 +106,7 @@ Train a reasoning + search LLM on NQ dataset with e5 as the retriever and wikipe
 
 (1) Download the indexing and corpus.
 ```bash
-save_path=/the/path/to/save
+save_path=/mlx_devbox/users/wu.hanlin/playground/Search-R1/searchr1_data
 python scripts/download.py --save_path $save_path
 cat $save_path/part_* > $save_path/e5_Flat.index
 gzip -d $save_path/wiki-18.jsonl.gz
